@@ -31,7 +31,7 @@ class FishingRod
     public function getFishingRodByType($TypeId)
     {
         $query="SELECT fr_ID, name FROM fishingrod
-         inner join type on fishingrod.typ_ID=type.t_id
+         inner join type on fishingrod.type_ID=type.t_id
          WHERE type.m_name='".$TypeId. "'";
         $dbvez=new DBCOntroller();
         $this->fishingrods=$dbvez->executeSelectQuery($query);
